@@ -68,17 +68,17 @@ const App = () => {
 
 #### Parameters
 
-| Name      | Type   | Description            |
+| Parameter | Type   | Description            |
 | --------- | ------ | ---------------------- |
 | `type`    | enums  | Transport port type    |
 | `options` | object | Transport port options |
 
 #### Returns
 
-| Name               | Type     | Description                |
-| ------------------ | -------- | -------------------------- |
-| `transport.emit`   | function | Emit a message             |
-| `transport.listen` | hook     | Listen a message with deps |
+| Return             | Type                                                              | Description          |
+| ------------------ | ----------------------------------------------------------------- | -------------------- |
+| `transport.emit`   | (name: string \| options, ...args: any[]) => any                  | Emit a message       |
+| `transport.listen` | (name: string, fn: (...args: any[]) => any, deps?: any[]) => void | Listen for a message |
 
 > The `use-transport` hook returns a transport instance. more API details can be found in the [data-transport](https://github.com/unadlib/data-transport) documentation.
 
