@@ -34,7 +34,6 @@ yarn add use-transport data-transport
 ### Features
 
 - Simple and responsible
-- Universal transport
 - Support for multiple transport ports
 - Support for mock transport
 - Full TypeScript support
