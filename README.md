@@ -40,7 +40,7 @@ yarn add use-transport data-transport
 
 ### API
 
-You can use the `use-transport` hook to create a transport instance.
+You can use the `use-transport` hook to create a transport instance. And then use the `emit` and `listen` methods to send and receive messages.
 
 ```jsx
 import React from 'react';
