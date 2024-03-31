@@ -82,6 +82,21 @@ const App = () => {
 
 > The `use-transport` hook returns a transport instance. more API details can be found in the [data-transport](https://github.com/unadlib/data-transport) documentation.
 
+> If you want to use the `use-transport` hook with TypeScript, you need to use `Transport` type from `use-transport`.
+
+```tsx
+type Interaction = {
+  listen: {
+    foo: (value: number) => Promise<number>;
+  };
+  emit: {
+    bar: (value: number) => Promise<void>;
+  };
+};
+
+const transport: Transport<Interaction> = useTransport('IFrameMain', {});
+```
+
 ## License
 
 `use-transport` is [MIT licensed](https://github.com/unadlib/use-transport/blob/main/LICENSE).

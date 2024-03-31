@@ -93,6 +93,7 @@ test('Base', async () => {
   act(() => {
     transport0.emit('foo', 2);
   });
+  // The listener should not be called after unmount.
   expect(result.current.state).toEqual(6);
   expect(fn0).toHaveBeenLastCalledWith(2);
   expect(fn0).toHaveBeenCalledTimes(2);

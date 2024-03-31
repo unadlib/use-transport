@@ -5,9 +5,15 @@ import {
   createTransport,
   type TransportMap,
   type TransportOptionsMap,
+  type Reverse as IReverse,
 } from 'data-transport';
 
+export type Reverse<T extends BaseInteraction> = IReverse<T>;
+
 export type Transport<T extends BaseInteraction = any> = ITransport<T> & {
+  /**
+   * Listen for an event and invoke the callback when it is emitted.
+   */
   listen: <K extends keyof T['listen']>(
     /**
      * The name of the event to listen for.
